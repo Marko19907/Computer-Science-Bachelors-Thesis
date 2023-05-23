@@ -1,0 +1,195 @@
+\section{Monolithic vs microservices vs serverless}
+
+\subsection{Monolithic}
+
+\noindent
+Monolithic architecture is an approach to building software applications that involves building the entire application as a single, self-contained unit. This approach is characterized by its simplicity, as all the components of the application are integrated into a single executable. This makes it easy to develop and deploy, as everything is contained in a single package, that can be installed on a server or in the cloud. Additionally, because all the components are tightly integrated, there is no need for complex communication between different parts of the application, which can simplify development and testing. \cite{agileacademy_monolithic_arch} \\
+
+\noindent
+But, due to the application being all in one piece, it can become complex and difficult to maintain as it grows. Any changes or updates to one part of the application can have a cascading effect on other parts, making it difficult to implement new features. A single error in any component can bring down the entire application, making it less sturdy than other architectures. As a result, monolithic architecture may not be the best choice for large or complex applications where flexibility, scalability, and stability are critical. \\
+
+\subsection{Microservices}
+
+The architecture of a microservice based software involves building an application where many small independent services communicate with each other through APIs. Each service is responsible for a specific task, and can be modified independently from the other services. This method provides a way better flexibility and scalability compared to the monolithic architecture, allowing for easier implementation of new features. \cite{atlassian_microservices} The application itself is also much more resilient, as a fault in one service is less likely to bring down the entire application. \\
+
+\noindent
+However, this method can also have its challenges. Due to the application being composed of many small services, there is a greater need for communication and coordination between them. This can make the development process a lot more difficult, as each service must be designed to work with each other. Designing an application using microservices might therefore not be the right choice for smaller applications, where the added complexity outweighs the benefits.
+
+\subsection{Serverless}
+\label{sec:serverless}
+
+\noindent
+Serverless architecture is a cloud-based approach to building and deploying applications where the cloud provider manages the infrastructure. The developers focus solely on writing code for functions that can be executed independently in response to events. This approach offers benefits such as scalability, cost-effectiveness, and reduced management overhead, since developers only pay for the actual execution time of their functions. \cite{cassel2022serverless} \\
+
+\noindent
+One of the main challenges with this architecture, is that developers must design their code to be stateless, since functions are executed independently and do not share state between executions. This can lead to additional complexity in the development process, as developers must manage stateful information in external data storage services. And since the code is broken down into small functions, one must also manage and deploy these functions individually, which  requires additional effort from the developers. Despite these challenges, serverless architecture offers a compelling option for those that require high scalability and cost efficiency. \\
+
+
+\section{Modern web applications}
+
+Compared to traditional websites, modern web applications have advanced significantly. In the past, websites were often static and unengaging, whereas modern web apps are much more interactive and dynamic. They work seamlessly across various devices such as desktops, tablets, and smartphones, making them highly adaptable and user-friendly. \\ 
+
+\noindent
+The development of modern web applications heavily relies on the use of front-end frameworks like React, Angular, and Vue \cite{monocubed_popular_frameworks}. They offer developers a wide range of tools to create user interfaces and experiences that are both engaging and dynamic. These frameworks also include additional features such as client-side routing, state management, and server-side rendering, which greatly enhance the performance and usability of web applications. \\
+
+\noindent
+Modern web applications are also heavily dependent on APIs, which provide a standardized mode of communication between web applications and external services. \cite{forbes_modern_APIs} This, in turn, enables developers to build applications that are modular, flexible, and scalable. \\
+
+\noindent
+The use of cloud computing services, such as Amazon Web Services,  Microsoft Azure, and Google Cloud Platform, is another crucial aspect of modern web application development. Cloud computing facilitates the easy deployment and scaling of web applications without the burden of managing physical infrastructure. \\
+
+\noindent
+Overall, modern web applications offer users an immersive and dynamic experience, and the capacity to scale and adapt to changing needs. The combination of modern front-end frameworks, APIs, and cloud computing services has revolutionized the way web applications are developed, and continues to advance the field of web application development. \\
+
+\section{JSON}
+
+JSON (JavaScript Object Notation) is a lightweight and widely-used data interchange format. It provides a simple and human-readable way to represent structured data, making it popular for data storage, configuration files, and communication between systems. JSON data is written as name/value pairs, with data separated by commas. Curly braces are used to hold objects, while square brackets are used to hold arrays, making JSON syntactically identical to the code for creating JavaScript objects. \cite{W3Schools_JSON_format, ECMAScript_JSON_format} This allows for easy conversion between JSON data and native JavaScript objects. \\
+
+\lstdefinestyle{json}{
+    basicstyle=\ttfamily\small,
+    showstringspaces=false,
+    breaklines=true,
+    % frame=lines
+}
+
+\begin{figure}[h]
+\lstset{style=json}
+\begin{lstlisting}
+{
+  "name": "John",
+  "age": 30,
+  "hobbies": ["reading", "swimming", "hiking"],
+  "address": {
+    "street": "123 Main St",
+    "city": "Springfield",
+    "state": "CA"
+  }
+}
+\end{lstlisting}
+\caption[JSON object example]{Example of a JSON object demonstrating name/value pairs, arrays, and objects}
+\label{JSON:Example_object}
+\end{figure}
+
+\noindent
+JSON's simplicity and flexibility make it highly compatible with different programming languages and platforms. Its textual format facilitates easy parsing and generation, allowing for seamless data exchange between systems. JSON's widespread adoption, particularly due to the rise of web  technologies, like JavaScript, and widespread tooling support make it a versatile choice for various applications, including web APIs, client-server communication, and data serialization. This has made it a popular alternative to other data interchange formats of the past such as CSV (Comma-Separated Values) and XML (eXtensible Markup Language). \cite{JSON_popularity} \\
+
+\subsection{JSON schema}
+
+JSON Schema is a powerful tool for validating and describing the structure of JSON data. It provides a standardized way to define the expected properties, types, and constraints of JSON objects. \cite{json_schema_offical} JSON Schema acts as a blueprint or contract that allows developers to enforce data integrity and ensure that JSON documents adhere to specific rules. \\
+
+\noindent
+JSON Schema follows a JSON-based syntax for defining schemas, making it easy to understand and work with. Schemas can include various keywords and validation rules, such as "type" to specify the data type of a property, "required" to define mandatory fields, and "pattern" to validate against regular expressions. Using these keywords, developers can express complex constraints within the JSON data. \\
+
+\section{Object oriented programming}
+\label{sec:OO-programming}
+
+Object-oriented programming (OOP) is a programming paradigm that organizes code into reusable objects that encapsulate data and behavior. It provides a structured approach to software development by modeling real-world entities as objects, which can interact with each other through defined interfaces. The fundamental principles of OOP revolve around the concepts of encapsulation, inheritance, and polymorphism. \cite{educba_OO_advantages} \\
+
+\noindent
+One of the key advantages of OOP is its ability to enhance code readability and maintainability. By encapsulating data and behavior within objects, OOP promotes the concept of modularization, allowing developers to focus on individual objects and their interactions. This leads to cleaner, more understandable code, making it easier to debug, modify, and extend software. \\
+
+\section{Functional programming}
+\label{sec:functional-programming}
+
+Functional programming is a programming paradigm that emphasizes the use of pure functions, immutability, and declarative programming style. In functional programming, functions are treated as first-class citizens, meaning they can be passed as arguments, returned as values, and stored in variables. \cite{freeCodeCamp_FP} Pure functions produce the same output for a given input, without causing any side effects. Immutability ensures that data remains unchanged once created, leading to code that is easier to reason about and less prone to bugs. \\
+
+\noindent
+Functional programming promotes code that is concise, modular, and easier to test and maintain. It encourages the use of higher-order functions, such as map, filter, and reduce, which operate on collections of data. These functions promote code reusability and enable developers to write more expressive and readable code. \\
+
+\section{Hooks}
+\label{sec:hooks-theory}
+
+Hooks in React have revolutionized the way developers manage state and lifecycle in React applications. Introduced in React 16.8, hooks provide a functional approach to component logic and allow developers to encapsulate and reuse stateful logic without the need for class components. React offers a set of built-in hooks, such as useState, useEffect, and useContext, which cover common use cases for managing state, performing side effects, and accessing context within functional components. \cite{React_hooks_offical} \\
+
+\noindent
+In addition to the built-in hooks, developers can create custom hooks to encapsulate reusable logic specific to their application's needs. Custom hooks enable the extraction of shared functionality into separate modules, promoting code reusability and maintainability. By following the naming convention and utilizing hooks as a convention, developers can create custom hooks that provide specific functionality and can be easily integrated into different components. \cite{React_CustomHooks_offical} \\
+
+\noindent
+Furthermore, numerous libraries and frameworks have embraced the concept of hooks and provide their own custom hooks as part of their APIs. These hooks extend the functionality of React and offer specialized features for handling their specific use cases. \\
+
+\section{Relational databases}
+\label{sec:relational-databases}
+
+Relational databases are a popular type of database management system that organizes data into tables with columns and rows, where each table represents an entity or concept, and each row represents a specific instance of that entity or concept. The relationships between tables are established through the use of foreign keys, which create links between tables and enable the retrieval of data from multiple tables using complex queries. \cite{wikipedia_relationalDB} \\
+
+\noindent
+Relational databases use Structured Query Language (SQL) to manipulate the data in the tables. SQL provides a rich set of commands for creating, modifying, and querying the tables, including commands for selecting, inserting, updating, and deleting data. \\
+
+\noindent
+One of the main advantages of relational databases is their ability to ensure data integrity. This is achieved through the use of constraints, such as primary keys, foreign keys, and check constraints, which enforce rules on the data in the tables. Relational databases also support transactions, which allow multiple operations to be grouped together as a single unit of work that either succeeds or fails as a whole, ensuring that the database remains in a consistent state. \\
+
+\noindent
+The relational model provides a high degree of data integrity and consistency, as well as powerful querying capabilities, making it well-suited for applications that require complex data structures and relationships. \cite{ibm_relational_databases}
+
+\section{NoSQL databases}
+\label{sec:NoSQL-databases}
+
+NoSQL databases are a type of non-relational database that are designed to handle large volumes of unstructured, semi-structured, and structured data. NoSQL databases are often used in applications that require high scalability, availability, and performance, and that deal with large volumes of data. \\
+
+\noindent
+Unlike traditional relational databases, NoSQL databases do not use the structured query language (SQL) for data manipulation and retrieval. Instead, they use other methods, such as key-value pairs, document stores, or graph databases. This means that data in NoSQL databases can be organized in a more flexible way, making them suitable for use cases where data is highly variable or dynamic, like for storing JSON files for example. \cite{Sisense_storing_json} \\
+
+\noindent
+NoSQL databases are also designed to be highly scalable and distributed, meaning that they can handle large amounts of data and traffic across multiple servers or nodes by scaling horizontally. This makes them a popular choice for applications that require high levels of performance and scalability. \\
+
+\noindent
+However, NoSQL databases also have some drawbacks. They do not provide the same level of data consistency and integrity as traditional SQL databases, which can lead to data inconsistencies or data loss in some cases. NoSQL databases also lack a standardized query language, which makes it difficult to perform complex queries across multiple tables or collections. \\
+
+\noindent
+They also don't have transaction support and often do not offer the same level of security features as traditional relational databases. For example, access control and encryption may be less mature or more difficult to implement. \cite{NoSQL_databases} \\
+
+\section{Docker}
+
+Docker is a prominent containerization technology that allows developers to package and encapsulate applications and their dependencies into lightweight, portable containers. In contrast to virtual machines (VMs), which require a separate operating system to be installed, Docker containers share the operating system kernel of the host machine, making them more lightweight, efficient, and faster to start up and shut down. \cite{Docker_containers, Docker_architecture} Docker containers can be easily deployed on different machines or cloud platforms, providing a consistent environment for the application to run in. \\
+
+\noindent
+Docker containers are created from Docker images, which are essentially snapshots of a particular configuration of an application and its dependencies. Docker images are built using a Dockerfile, which specifies the base image, the application code, and any necessary dependencies or configuration. Docker also provides a range of tools and services for managing containers, including Docker Compose, which allows multiple containers to be managed as a single application, and Docker Swarm, which provides orchestration and scaling capabilities for containerized applications.
+
+% We probably don't need this? 
+% One of the key benefits of using Docker is the ability to isolate applications and their dependencies in containers, providing a more secure and reliable environment for running the application. Docker containers can also be easily scaled up or down depending on the demand for the application, making it a popular choice for building and deploying microservices-based applications.
+
+\section{Security}
+
+Security is a critical consideration in any web application project. Without proper security measures, your application can be vulnerable to attacks that compromise user data, cause service disruptions, and harm to the reputation of the application and its developers. 
+
+% \subsection{Encryption}
+
+% Encryption is a way to encode the data so that it can only be read by authorized parties. In web applications, encryption is often used to secure user data during transmission and storage. SSL/TLS certificates provide a secure connection between the user's browser and the server, ensuring that data is encrypted during transmission. Encryption is also used to secure user data in databases by encrypting sensitive data such as passwords and credit card numbers.
+
+% \todo{This should be removed, we don't use any encryption}
+
+\subsection{Authentication}
+
+Authentication is the process of verifying the identity of a user. This can be done using various methods such as username/password authentication, password-less email authentication, multi-factor authentication (MFA), and single sign-on (SSO). Proper authentication mechanisms can prevent unauthorized access to your web application and protect user data. \cite{dzone_authentication}
+
+\subsection{Authorization}
+
+Authorization is to process of determining whether a user has permission to access certain resources or perform certain actions. Role-based access control (RBAC) and attribute-based access control (ABAC) are commonly used authorization mechanisms. Proper authorization mechanisms ensure that only authorized users can access sensitive data or perform critical actions within the application. \cite{csharpcorner_authorization}
+
+\subsection{JWT}
+
+JWT tokens are used in web applications because they provide a secure and efficient way of handling user authentication and authorization. The server generates a token that contains user-specific information, which can be verified without having to verify the users credential with each request. JWTs are also signed, so they cannot be modified or changed without the server being able to detect the tampering. This provides a secure way of exchanging information between server and client. \cite{logrocket_JWT}
+
+\subsection{Tokens}
+\label{sec:tokens}
+
+Access tokens play a crucial role in modern authentication and authorization systems. They are based on the concept of token-based authentication, where a token is used as a proof of identity and authorization. \cite{Okta_tokens} Tokens are typically issued by an authentication server after a successful authentication process, such as username and password validation or through a third-party identity provider. \\
+
+\noindent
+To ensure the security of access tokens, they are often digitally signed or encrypted. This prevents tampering and unauthorized modifications to the token during transmission. The server can verify the integrity and authenticity of the access token by validating the signature or decrypting the token using the appropriate secret key. \\
+
+\section{Agile methods}
+
+Agile development is a popular approach to software development that emphasizes iterative and incremental development. It involves working in short cycles or sprints, where each cycle typically lasts a few weeks. The aim is to deliver working software in each cycle, allowing for early and continuous feedback from stakeholders. The process is highly collaborative, with close interaction between the development team, product owners, and users. Agile development values responding to change over following a plan, and emphasizes the importance of adaptability, teamwork, and customer satisfaction. \cite{AgileAlliance_agile101} This approach is widely used in programming due to its flexibility, ability to adapt to changing requirements, and emphasis on user feedback, leading to the development of high-quality software products.
+
+\subsection{Scrum}
+
+Scrum is an Agile framework for managing and completing complex projects in software development. It is a lightweight and flexible process that focuses on iterative development, continuous improvement, and team collaboration. \cite{MountainGoatSoftware_scrum_overview} The framework involves a series of short sprints, typically lasting two to four weeks, where the team works to deliver a potentially shippable product increment. Scrum is centered around the Scrum team, which includes the Product Owner, Scrum Master, and Development Team, who work together to achieve the sprint goal. The framework emphasizes transparency, inspection, and adaptation, and encourages regular meetings, such as daily stand-ups and sprint reviews, to ensure that the team is on track to meet their goals. Scrum is widely used in programming due to its effectiveness in improving productivity, communication, and teamwork, leading to the development of high-quality software products. \cite{Stackify_Scrum_benefits}
+
+% \subsection{Pair programming}
+% Pair programming is a software development technique that involves two programmers working together at a single computer to jointly solve a programming task. In pair programming, the roles of the two programmers are distinct and complementary. The driver is responsible for writing the code, while the navigator is responsible for observing the code and providing feedback, suggestions, and direction. This collaborative approach has been found to improve code quality, increase productivity, and enhance learning outcomes. Pair programming has been adopted in various educational contexts, including computer science and software engineering courses, to promote teamwork, problem-solving skills, and critical thinking abilities. Furthermore, empirical research has shown that pair programming can also foster a more positive and engaging learning experience for students. Therefore, pair programming is a valuable instructional strategy that can facilitate the development of technical and interpersonal skills in students.
+
+\subsection{Code review}
+
+Code review is a software engineering practice that involves a systematic and critical examination of source code to identify and correct defects, improve code quality, and ensure compliance with coding standards and design guidelines. \cite{atlassian_code_review} Code review can be conducted in different forms, such as formal or informal, manual or automated, and individual or collaborative. The primary purpose of code review is to prevent defects from being introduced into the codebase and to promote continuous learning and improvement among developers. Code review is an essential component of the software development life cycle, as it can reduce the cost of defects and enhance the maintainability, reliability, and scalability of software systems. Moreover, code review can also facilitate knowledge sharing, team building, and communication within the development team. \cite{springboard_code_review_checklist} Therefore, code review is a valuable technique that can help software developing teams achieve their goals of delivering high-quality, reliable, and maintainable software products.
+

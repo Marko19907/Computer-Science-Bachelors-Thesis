@@ -1,0 +1,251 @@
+\section{Scientific discussion}
+
+\subsection{Expectations VS Results}
+\label{sec:time_results}
+
+% Given the short timeframe we had, we are satisfied with the results we have achieved. While there are some parts of the system that are still missing or incomplete, it is worth mentioning that we have successfully incorporated functionality that was initially planned in the minimum viable product description. \\
+
+In order to evaluate the effectiveness of our solution and its impact on time efficiency, we conducted an experiment following the completion of the last sprint. The experiment involved three members of our team, each assigned specific roles. One member designed and set up the experiment, planting three deliberate errors within two JSON configuration files. The other two members were tasked with identifying and rectifying these errors, first using a basic text editor and then utilizing our web application. \\
+
+\noindent
+Throughout the experiment, we carefully tracked the time taken by each team member to fix the configuration errors, as well as their overall success rate in resolving all issues. The results revealed a notable improvement in time efficiency when using our web application. The average time required to rectify a configuration error decreased from 156.50 seconds to 94.75 seconds, representing a significant $\approx 39\%$ reduction in time spent.
+This can be seen in graph in \autoref{test:results} and in \autoref{table:test-results-averages}. \\
+
+
+\newpage
+
+
+\begin{figure}[!ht]
+   \begin{minipage}{1\textwidth}
+     \centering
+     \includesvg[inkscapelatex=false, width=.95\textwidth]{Figures/results-figure.svg}
+     \caption[Experiment results graph]{Comparison of results obtained through manual configuration fixes versus using our web application}
+     \label{test:results}
+   \end{minipage}\hfill
+\end{figure}
+
+
+\begin{table}[!ht]
+\centering
+\begin{tabular}{l|l|l|lll|l|l|ll}
+\multicolumn{1}{l}{Case 1} & \multicolumn{1}{l}{}          & \multicolumn{1}{l}{} &  &  & \multicolumn{1}{l}{Case 2} & \multicolumn{1}{l}{}          & \multicolumn{1}{l}{} &  &   \\ 
+\cline{2-3}\cline{7-8}
+                           & \multicolumn{1}{l}{Subject 1} &                      &  &  &                            & \multicolumn{1}{l}{Subject 1} &                      &  &   \\ 
+\cline{2-3}\cline{7-8}
+                           & Method                        & app                  &  &  &                            & Method                        & app                  &  &   \\ 
+\cline{2-3}\cline{7-8}
+                           & Time (s)                      & 64                   &  &  &                            & Time (s)                      & 126                  &  &   \\ 
+\cline{2-3}\cline{7-8}
+                           & Errors                        & 0                    &  &  &                            & Errors                        & 0                    &  &   \\ 
+\cline{2-3}\cline{7-8}
+                           &                               &                      &  &  &                            &                               &                      &  &   \\ 
+\cline{2-3}\cline{7-8}
+                           & Method                        & manual               &  &  &                            & Method                        & manual               &  &   \\ 
+\cline{2-3}\cline{7-8}
+                           & Time (s)                      & 145                  &  &  &                            & Time (s)                      & 186                  &  &   \\ 
+\cline{2-3}\cline{7-8}
+                           & Errors                        & 0                    &  &  &                            & Errors                        & 1                    &  &   \\ 
+\cline{2-3}\cline{7-8}
+\multicolumn{1}{l}{}       & \multicolumn{1}{l}{}          & \multicolumn{1}{l}{} &  &  & \multicolumn{1}{l}{}       & \multicolumn{1}{l}{}          & \multicolumn{1}{l}{} &  &   \\
+\multicolumn{1}{l}{}       & \multicolumn{1}{l}{}          & \multicolumn{1}{l}{} &  &  & \multicolumn{1}{l}{}       & \multicolumn{1}{l}{}          & \multicolumn{1}{l}{} &  &   \\ 
+\cline{2-3}\cline{7-8}
+                           & \multicolumn{1}{l}{Subject 2} &                      &  &  &                            & \multicolumn{1}{l}{Subject 2} &                      &  &   \\ 
+\cline{2-3}\cline{7-8}
+                           & Method                        & app                  &  &  &                            & Method                        & app                  &  &   \\ 
+\cline{2-3}\cline{7-8}
+                           & Time (s)                      & 94                   &  &  &                            & Time (s)                      & 95                   &  &   \\ 
+\cline{2-3}\cline{7-8}
+                           & Errors                        & 0                    &  &  &                            & Errors                        & 0                    &  &   \\ 
+\cline{2-3}\cline{7-8}
+                           &                               &                      &  &  &                            &                               &                      &  &   \\ 
+\cline{2-3}\cline{7-8}
+                           & Method                        & manual               &  &  &                            & Method                        & manual               &  &   \\ 
+\cline{2-3}\cline{7-8}
+                           & Time (s)                      & 138                  &  &  &                            & Time (s)                      & 157                  &  &   \\ 
+\cline{2-3}\cline{7-8}
+                           & Errors                        & 2                    &  &  &                            & Errors                        & 0                    &  &   \\
+\cline{2-3}\cline{7-8}
+\end{tabular}
+\caption[Experiment results raw data]{The raw data we collected during the experiment}
+\label{table:test-results-raw}
+\end{table}
+
+
+\begin{table}[!ht]
+\centering
+\begin{tabular}{|l|l|l|l|l|} 
+\hline
+       & Subject 1, App & Subject 1, Manual & Subject 2, App & Subject 2, Manual \\ 
+\hline
+Case 1 & 64             & 145               & 94             & 138               \\ 
+\hline
+Case 2 & 126            & 186               & 95             & 157               \\
+\hline
+\end{tabular}
+\caption[Experiment results table]{The data from the experiment formatted in a table}
+\label{table:test-results}
+\end{table}
+
+
+\begin{table}[!ht]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+              & Average time (s) \\ \hline
+App           & 94.75            \\ \hline
+Manual        & 156.50           \\ \hline
+\% difference & 39.46            \\ \hline
+\end{tabular}
+\caption[Experiment results average time]{The average time it took a test subject to correct a JSON file in each tool, time in seconds}
+\label{table:test-results-averages}
+\end{table}
+
+\noindent
+Moreover, the participants provided valuable feedback regarding their experience with the experiment. They reported that manually identifying errors in the JSON schema and subsequently correcting the configurations using a text editor was challenging and confusing. Additionally, the absence of a validation check within the text editor made it difficult to ascertain whether the configuration was correctly fixed or not. \\
+
+\noindent
+These findings, although based on a small-scale experiment, demonstrate the potential for improvement in JSON configuration file management tools. The results underscore the importance of our web application's ability to streamline the error identification and resolution process, leading to enhanced time efficiency for users. Nonetheless, further research and exploration are necessary to fully explore and validate these initial findings. \\
+
+
+\clearpage % Same as \newpage but ignores floats (figures and tables)
+
+
+\section{Limitations and challenges}
+
+% \subsection{Next framework}
+% We didn't really have any issues with Next itself
+
+\subsection{NextAuth challenges}
+
+We found that NextAuth is a powerful authentication library for Next.js that provides a seamless and flexible way to handle authentication and authorization in web applications. However, during our implementation of the library, we faced some issues that caused difficulties in achieving certain functionalities that were required by the client. One such issue was the inability to link accounts with different emails and the lack of automatic linking for accounts with the same email. We found that in order to enable account linking to the same email, we needed to use the allowDangerousEmailAccountLinking flag, which can be a security risk if not used properly. An example of this can be seen in \autoref{NextAuth:GoogleConfig}. There was however no solution for linking accounts with a different email addresses. \\
+
+\begin{figure}[h]
+\lstset{basicstyle=\ttfamily\small}
+\begin{lstlisting}
+GoogleProvider({
+    clientId: env.GOOGLE_CLIENT_ID,
+    clientSecret: env.GOOGLE_CLIENT_SECRET,
+    allowDangerousEmailAccountLinking: true,
+}),
+\end{lstlisting}
+\caption[Google provider configuration]{A code snippet demonstrating the configuration of the Google provider with the allowDangerousEmailAccountLinking property set to true}
+\label{NextAuth:GoogleConfig}
+\end{figure}
+
+\noindent
+Another issue we faced was the lack of built-in support for unlinking accounts and refreshing the session token. While NextAuth does indeed provide a simple and easy to use API for handling authentication, we found that managing the state of linked accounts and refreshing the session after modifying an account required additional development and implementation effort. This might lead to potential security vulnerabilities in the future if not properly handled. \\
+
+\noindent
+In light of these challenges and in consultation with the client, we ultimately decided to forgo these requirements.
+
+\subsection{Prisma problems}
+
+We found Prisma to be a great tool for our project, as it allowed us to focus on application logic rather than database operations. It simplifies database access and eliminates the need for raw SQL queries. One of the most significant advantages of using Prisma is its ability to perform database migrations easily. This makes it easy to keep the database schema in sync with the application codebase as it evolves over time and more fields and tables are added. \\
+
+\noindent
+However, there have been some limitations with Prisma that we encountered during development. One of the biggest issues we faced while working with Prisma was its inability to use more than one database provider in a single project. In our project, we wanted to use SQLite for local development and testing, but we also needed to use PostgreSQL in production like the client requested. Unfortunately, Prisma only supports a single database provider per project, which meant that we had to choose between using SQLite or PostgreSQL for our entire project. \\
+
+\noindent
+This issue was particularly frustrating because we wanted to take advantage of the benefits of using SQLite for local development and testing, such as its lightweight nature and ease of use. However, we were forced to use PostgreSQL for the entire project, which was less than ideal. While we enjoyed working with Prisma and appreciated its many benefits, as Prisma continues to evolve and improve, we hope to see these issues addressed in future releases. 
+
+\subsection{Deployment}
+
+In our project, we chose to use Vercel as our continuous integration and deployment solution. We connected our GitHub repository and set up a build and deployment process. Whenever we pushed new code to the main branch of the repository, Vercel would automatically build and deploy the changes to the live version of the application. \\
+
+\noindent
+An advantage of using Vercel is that it provides a live preview of the deployed application for any branch. This meant that our client had access to the live version of the application during the entire duration of the project and this allowed them to provide feedback and make suggestions based on the actual application instead of just mockups or prototypes. 
+
+\subsection{Requirements and Limitations}
+
+The requirements for this project were outlined in the project description, which is provided in \hyperref[chap:project-description]{appendix B, project description}.
+
+% As with any software development project, the requirements were adjusted along the way based on the team's understanding of the problem, feedback from the client, and constraints such as time and resources. 
+
+\noindent
+During the development of the app, we encountered several requirements and limitations that we had to address. These requirements were mainly based on the project description, but some of them had to be adjusted or dropped along the way due to technical limitations or time constraints.
+
+\subsubsection{Email and password authentication}
+
+One of the first requirements that we had to drop was the email and password login. We initially planned to have users log in with their email and password like the client requested, but due to the limitations of NextAuth, \cite{NextAuth_limitations} we had to drop this feature in favor of a passwordless email login. While this may have caused some inconvenience for users, we believe that it was the best solution given the circumstances and it helps improve our security since no passwords are stored.
+
+\subsubsection{Download from a URL}
+
+Another requirement that we had to drop was the ability to download with a URL. Originally, we planned to allow users to download a JSON file by inputting a URL. However, we discovered that tRPC, the library we used for server-client communication, did not support binary file transfer, making it impossible to download a file in this way. Support for this isn't planned in tRPC, and as a result, we had to drop this requirement. \cite{lkj4_tRPC_limitation}
+
+% \subsubsection{Verify schema (to be a schema)}
+% There was no good way to do this, unsure if it should be included 
+
+\subsubsection{Users can't run the validation with a button}
+
+A third requirement that we had to drop was the ability for users to manually run the validation with a button. Initially, we planned to allow users to run the validation process manually with a button. However, the client requested us to remove this feature due to concerns about wasting compute time. Instead, we made the decision to only run the validation process when the configuration was updated, ensuring that the validation process was only run when necessary. 
+
+\subsubsection{Editing fields inside the editor}
+
+We were unable to implement the ability for users to edit fields inside the configuration editor. While this was a feature that we initially wanted to include, we found that the way we had designed the editor prevented us from implementing this in a good way. Due to time constraints, we had to limit editing to the tree view, which is provided by an external library. 
+
+\section{Communication}
+
+\subsection{Client}
+Communication with the client was a crucial part of our development process. We held meetings with the client at the end of every sprint to discuss the progress made, receive feedback and to plan for the next sprint. Prior to each meeting we were expected to send a meeting notice along with a sprint report. However, there were instances were the report was sent out a little late due to us either forgetting, or us wanting finish more of the tasks before sending the status.
+Aside from this, the communication itself went really well. The feedback was a great tool in order to keep the focus on the correct aspects of the project.
+
+\subsection{Internal}
+
+During the course of the project, it became clear that the communication within the group was not as effective as it could have been. In the beginning, rather than discussing tasks and plans as a team, some members tended to work on tasks independently without adequate discussion with the rest of the group. This led to a lack of clarity and understanding of what other members were working on and what the overall progress of the project was. But we had some discussions within the group and made sure that everything would be documented, so this problem was solved pretty early. \\
+
+
+\noindent 
+Additionally, there were several instances where the group planned to meet up and work together at school, but it did not go as smoothly as they could have. There were times when some members did not respond or were late, which caused frustration and delays. But a lot of these problems occurred due to bad planning, as we mostly decided on which days to work the day before. If we had put down a proper plan for the different weeks, this is a problem that could have been easily mitigated. \\
+
+
+\noindent 
+Another area of concern was that when disagreements arose, the conversations sometimes became heated and unprofessional. This led to tension within the group and negatively impacted the morale of the team. \\
+
+\subsection{How we worked}
+
+Creating tasks in Jira was a crucial aspect of our work process as it provided a centralized platform for task management. The intended purpose was to allow each team member to choose tasks from a backlog whenever they completed their current assignments, ensuring a continuous workflow. However, this method did not work as effectively as planned as not all team members were equally proactive in picking up new tasks. As a result, some team members ended up with additional workloads, leading to an uneven distribution of work within the group.\\
+
+\noindent 
+To address this issue, we re-evaluated the workload and tried to delegate tasks more evenly among group members, based on their individual strengths and areas of expertise. The resulting workload was still a bit unbalanced, but it helped to uneven some of the problem towards the end of the project. \\
+
+\noindent
+To ensure effective communication with the client and supervisor, we made plans to hold meetings at the end of each sprint, which required all team members' presence. We also scheduled meetings with our supervisor to discuss various aspects of the report. \\
+
+\noindent
+As mentioned earlier, we found that a lot of tasks were being completed without proper planning or discussion within the group. One notable example was the implementation of the database structure, which was not properly discussed in the group before being implemented. However, we quickly recognized this issue and took steps to improve our internal work processes. \\
+
+
+% We also attempted to involve the less experienced members in the more complex aspects of development through the use of pair programming. Although this approach offered some opportunities for learning, it proved to be less effective than anticipated as the co-pilot often lacked the foundational knowledge needed to grasp the more advanced concepts. As a result, the development process was slowed down, which could be frustrating for the driver, while the co-pilot was overwhelmed by the amount of information presented to them and struggled to integrate it all together. Ultimately, despite our efforts to address the experience gap, there was still some imbalance in the workload among group members. However, the steps we took to mitigate the issue did have a positive impact, and the gap was reduced by a fair amount as a result. \\
+
+
+
+\subsection{The plans we made}
+
+Our planning process lacked structure and specificity. Although we had a preparation plan that outlined certain activities, it did not include a schedule or clearly designate who was responsible for each task. This lack of specificity may have contributed to a lack of motivation and productivity experienced by some team members in the initial stages of the project. \\
+
+\noindent
+We decided to meet up on campus almost every day to work together as a team. Being in the same physical space meant that we could easily communicate and collaborate on tasks, ask each other for help, and have in-depth discussions about project details. Despite some members regularly not showing up for these sessions, it still helped the rest of us work more effectively, as we were able to quickly address issues or concerns that arose during the development process. This also allowed us to give each other suggestions on how to solve various problems, if anyone got stuck with a task. \\
+
+\noindent
+We also planned bi-weekly meetings with the client. Every member of the team were supposed to be present for these meetings, but unfortunately not all members showed up. Unfortunately, there was one member who failed to show up for these meetings on multiple occasions.\\
+
+\subsection{Agile methodology}
+
+In our project, we adopted the agile work methodology, which involved dividing the development process into smaller sprints that typically lasted around 2 weeks. After each sprint, we held a meeting with the client to gather feedback and prepare for the next sprint.\\
+
+\noindent
+To streamline the planning process, we worked collaboratively with the client to establish a list of essential requirements and various stretch goals. We then prioritized these items based on their importance, which allowed us to determine what to include in each sprint and what to focus on. The team really felt that this approach helped us plan our work more effectively and ensured that we were making progress towards our goals. 
+
+
+
+\subsection{Collaborations with Jira and Confluence}
+
+We utilized Jira and Confluence for collaboration purposes. Jira was used to plan our sprints, delegate tasks and report our hours. Although this system worked well, there were some challenges with the time-logging process, as hours needed to be properly logged in order to start the next sprint. Unfortunately, this process was not always done in a timely manner. Also, we had never used Jira before, which meant that there were some functions that we didn't utilize to their fullest potential.\\
+
+\noindent
+In addition to Jira, we also made use of Confluence to store our product requirements, meeting notes, and decision logs. However, in retrospect, we probably could have used Confluence more proactively than we did. It is a very powerful tool, but we didn't fully leverage its capabilities, which may have hindered our collaborative efforts.
+
+
+\subsection{Pull requests}
+To improve our internal work processes, we also utilized branching and pull requests when needed. This helped us review and evaluate code changes before merging them into the main branch, enabling us to identify and fix any mistakes or errors before they were pushed to production.\\
+
